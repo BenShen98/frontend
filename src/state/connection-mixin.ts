@@ -167,19 +167,17 @@ export const connectionMixin = <T extends Constructor<HassBaseEl>>(
         },
         // For messages that expect a response
         callWS: <R>(msg) => {
-          if (__DEV__ || this.hass?.debugConnection) {
-            // eslint-disable-next-line no-console
-            console.log("Sending", msg);
-          }
-
           const resp = conn.sendMessagePromise<R>(msg);
 
           if (__DEV__ || this.hass?.debugConnection) {
+            const debug_id = Math.floor(Math.random() * 100);
+            // eslint-disable-next-line no-console
+            console.log(`callWS: Sending @${debug_id}`, msg);
             resp.then(
               // eslint-disable-next-line no-console
-              (result) => console.log("Received", result),
+              (result) => console.log(`callWS: Received @${debug_id}`, result),
               // eslint-disable-next-line no-console
-              (err) => console.error("Error", err)
+              (err) => console.error(`callWS: Error @${debug_id}`, err)
             );
           }
           return resp;

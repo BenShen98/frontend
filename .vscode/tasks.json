@@ -5,6 +5,10 @@
       "label": "Develop Frontend",
       "type": "gulp",
       "task": "develop-app",
+      "runOptions": {
+        "instanceLimit": 1,
+        "runOn": "folderOpen"
+      },
       // Sync changes here to other tasks until issue resolved
       // https://github.com/Microsoft/vscode/issues/61497
       "problemMatcher": {
@@ -32,9 +36,6 @@
       "group": {
         "kind": "build",
         "isDefault": true
-      },
-      "runOptions": {
-        "instanceLimit": 1
       }
     },
     {
@@ -97,7 +98,8 @@
       "isBackground": true,
       "group": "build",
       "runOptions": {
-        "instanceLimit": 1
+        "instanceLimit": 1,
+        "runOn": "default"
       }
     },
     {
