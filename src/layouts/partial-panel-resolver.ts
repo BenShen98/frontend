@@ -36,6 +36,9 @@ const COMPONENTS = {
   todo: () => import("../panels/todo/ha-panel-todo"),
   "media-browser": () =>
     import("../panels/media-browser/ha-panel-media-browser"),
+
+  // requires frontend.async_register_built_in_panel(hass, DOMAIN, frontend_url_path="butler", sidebar_title="test_butler") in backend to work
+  butler: () => import("../butler/intergration-panels/ha-panel-butler"),
 };
 
 @customElement("partial-panel-resolver")

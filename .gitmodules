@@ -1,0 +1,4 @@
+[submodule "src/butler"]
+	path = src/butler
+	url = https://github.com/BenShen98/butler.git
+	branch = frontend

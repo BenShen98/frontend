@@ -80,6 +80,7 @@ class PanelDeveloperTools extends LitElement {
               "ui.panel.developer-tools.tabs.statistics.title"
             )}
           </paper-tab>
+          <paper-tab page-name="butler">Butler</paper-tab>
           <paper-tab page-name="assist">Assist</paper-tab>
         </paper-tabs>
       </div>

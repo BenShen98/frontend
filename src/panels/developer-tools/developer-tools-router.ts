@@ -48,6 +48,11 @@ class DeveloperToolsRouter extends HassRouterPage {
         tag: "developer-tools-assist",
         load: () => import("./assist/developer-tools-assist"),
       },
+      butler: {
+        tag: "developer-tools-butler",
+        load: () =>
+          import("../../butler/developer-tools/developer-tools-butler"),
+      },
       debug: {
         tag: "developer-tools-debug",
         load: () => import("./debug/developer-tools-debug"),

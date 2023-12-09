@@ -217,14 +217,16 @@ export class HaDevicePicker extends LitElement {
           deviceEntityLookup[device.id]
         );
 
+        const area =
+          device.area_id && areas[device.area_id]
+            ? areas[device.area_id].name
+            : this.hass.localize("ui.components.device-picker.no_area");
+
         return {
           id: device.id,
           name: name,
-          area:
-            device.area_id && areas[device.area_id]
-              ? areas[device.area_id].name
-              : this.hass.localize("ui.components.device-picker.no_area"),
-          strings: [name || ""],
+          area: area,
+          strings: [`${name} ${area}` || ""],
         };
       });
       if (!outputDevices.length) {
