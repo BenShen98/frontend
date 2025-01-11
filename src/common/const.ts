@@ -70,6 +70,7 @@ export const DOMAINS_INPUT_ROW = [
   "input_datetime",
   "input_number",
   "input_select",
+  "ssr",
   "input_text",
   "light",
   "lock",
