@@ -14,6 +14,7 @@ export const DOMAINS_WITH_CARD = [
   "event",
   "input_button",
   "input_select",
+  "ssr",
   "input_number",
   "input_text",
   "humidifier",

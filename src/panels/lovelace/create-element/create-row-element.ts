@@ -41,6 +41,7 @@ const LAZY_LOAD_TYPES = {
     import("../entity-rows/hui-input-number-entity-row"),
   "input-select-entity": () =>
     import("../entity-rows/hui-input-select-entity-row"),
+  "ssr-select-entity": () => import("../entity-rows/hui-ssr-select-entity-row"),
   "input-text-entity": () => import("../entity-rows/hui-input-text-entity-row"),
   "lock-entity": () => import("../entity-rows/hui-lock-entity-row"),
   "number-entity": () => import("../entity-rows/hui-number-entity-row"),
@@ -79,6 +80,7 @@ const DOMAIN_TO_ELEMENT_TYPE = {
   input_number: "input-number",
   input_select: "input-select",
   input_text: "input-text",
+  ssr: "ssr-select",
   light: "toggle",
   lock: "lock",
   media_player: "media-player",
