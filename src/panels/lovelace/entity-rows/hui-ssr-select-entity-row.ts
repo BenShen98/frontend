@@ -43,17 +43,14 @@ class HuiSSRSelectEntityRow extends LitElement implements LovelaceRow {
       return;
     }
     if (changedProps.has("hass")) {
-      const oldHass = changedProps.get("hass");
       const stateObj = this.hass?.states[this._config.entity] as
         | SSRSelectEntity
         | undefined;
-      const oldStateObj = oldHass?.states[this._config.entity] as
-        | SSRSelectEntity
-        | undefined;
-      if (
-        stateObj &&
-        stateObj.attributes.options !== oldStateObj?.attributes.options
-      ) {
+
+      // in render, the options are sorted by weight, with highiest weight at the top
+      // we can always select the first option
+      if (stateObj) {
+        this._haSelect.select(0);
         this._haSelect.layoutOptions();
       }
     }

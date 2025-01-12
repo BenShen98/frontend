@@ -31,12 +31,18 @@ export interface SSRSelectMutableParams {
 export const setSSRSelectOption = (
   hass: HomeAssistant,
   entity: string,
-  option: string
+  option: string,
+  callback?: (result: any) => void
 ) =>
-  hass.callService("ssr", "select_option", {
-    option,
-    entity_id: entity,
-  });
+  hass
+    .callService("ssr", "select_option", {
+      option,
+      entity_id: entity,
+    })
+    .then((result) => {
+      if (callback) callback(result);
+      return result;
+    });
 
 export const fetchSSRSelect = (hass: HomeAssistant) =>
   hass.callWS<SSRSelect[]>({ type: "ssr_select/list" });
