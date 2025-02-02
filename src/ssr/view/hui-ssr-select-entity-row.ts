@@ -8,7 +8,7 @@ import "../../components/ha-select";
 import type { HaSelect } from "../../components/ha-select";
 import { UNAVAILABLE } from "../../data/entity";
 import { forwardHaptic } from "../../data/haptics";
-import type { SSRSelectEntity } from "../../data/ssr_select";
+import type { SSRSelectEntity } from "../data/ssr_select";
 import { setSSRSelectOption } from "../data/ssr_select";
 import type { HomeAssistant } from "../../types";
 import type { EntitiesCardEntityConfig } from "../../panels/lovelace/cards/types";

@@ -16,6 +16,7 @@ import "./state-card-input_button";
 import "./state-card-input_number";
 import "./state-card-input_select";
 import "./state-card-input_text";
+import "../ssr/view/state-card-ssr";
 import "./state-card-lawn_mower";
 import "./state-card-lock";
 import "./state-card-media_player";
